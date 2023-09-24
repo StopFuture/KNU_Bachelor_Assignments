@@ -1,0 +1,6 @@
+aba  4
+aa  2
+a  10
+aaaaaaa  1
+aaaa  3
+b  1
