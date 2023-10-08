@@ -1,0 +1,9 @@
+Alphabet Size: 2 
+Number of States: 2 
+Start State: 1 
+Number of Final States: 1 
+Final States:0 
+0 a 0
+0 b 0
+1 a 0
+1 b 1
