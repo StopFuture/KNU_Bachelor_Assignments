@@ -31,7 +31,7 @@ int main() {
     initialise_transition_map(&dfa);
     initialise_dfa(&dfa, input_file);
     printf("DFA initialized successfully.\n");
-    printf("Minimised DFA: \n");
+
     determine_reachable_states(&dfa);
     partition_dfa(&dfa);
 
@@ -44,6 +44,7 @@ int main() {
     FILE *output_file;
     output_file = fopen(output_file_path, "w");
     print_dfa_details(&dfa, output_file);
+    print_dfa_original(&dfa, output_file);
     printf("DFA details written to the output file: %s\n", output_file_path);
     return 0;
 }

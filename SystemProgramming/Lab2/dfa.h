@@ -24,6 +24,7 @@ typedef struct {
     long int final_states;
     long int non_final_states;
     long int *P;
+    int stateMapping[MAX_STATES];
 } DFA;
 
 
@@ -33,6 +34,6 @@ void initialise_transition_map(DFA *dfa);
 void partition_dfa(DFA *dfa);
 void print_dfa_details(DFA *dfa, FILE* file);
 void initialise_dfa(DFA *dfa, FILE *file);
-
+void print_dfa_original(DFA *dfa, FILE* file);
 
 #endif //LAB2_DFA_H

@@ -7,3 +7,17 @@ Final States:0
 0 b 0
 1 a 0
 1 b 1
+--------------
+Mapping States: 1 0 0 3 
+Original States: 0 1 2 3 
+--------------
+Original Numerated Minimised DFA: 
+Alphabet Size: 2 
+Number of States: 2 
+Start State: 0 
+Number of Final States: 1 
+Final States:1 
+0 a 1
+0 b 0
+1 a 1
+1 b 1
