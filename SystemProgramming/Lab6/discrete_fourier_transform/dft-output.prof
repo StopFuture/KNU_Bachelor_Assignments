@@ -1,0 +1,287 @@
+Analysis of sampling discrete_fourier_transform (pid 6453) every 1 millisecond
+Process:         discrete_fourier_transform [6453]
+Path:            /Users/USER/*/discrete_fourier_transform
+Load Address:    0x10439c000
+Identifier:      discrete_fourier_transform
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  bash [6451]
+
+Date/Time:       2023-11-25 19:04:26.920 +0200
+Launch Time:     2023-11-25 19:04:26.761 +0200
+OS Version:      macOS 14.1 (23B74)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         1953K
+Physical footprint (peak):  1953K
+Idle exit:                  untracked
+----
+
+Call graph:
+    8297 Thread_5209070   DispatchQueue_1: com.apple.main-thread  (serial)
+      8297 start  (in dyld) + 2360  [0x18937d0e0]
+        8297 main  (in discrete_fourier_transform) + 52  [0x10439d230]
+          8297 std::rt::lang_start_internal::haeade8bb0e866fa6  (in discrete_fourier_transform) + 648  [0x1043b2230]
+            8297 std::rt::lang_start::_$u7b$$u7b$closure$u7d$$u7d$::h2eb7fbd936ff8fb9  (in discrete_fourier_transform) + 16  [0x10439cb8c]
+              8297 std::sys_common::backtrace::__rust_begin_short_backtrace::h408541ec28ffc71c  (in discrete_fourier_transform) + 12  [0x10439cb74]
+                2059 discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform) + 616  [0x10439cf98]
+                + 1147 __sincos_stret  (in libsystem_m.dylib) + 348,356,...  [0x195e9e9fc,0x195e9ea04,...]
+                + 386 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! 165 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! : 98 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! : 31 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+                + ! : 15 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! : 7 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! : 6 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! : 4 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cfc  [0x195e9ecfc]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d04  [0x195e9ed04]
+                + ! 97 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! 46 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                + ! 21 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! 16 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+                + ! 10 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d34  [0x195e9ed34]
+                + ! 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                + ! 7 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                + ! 4 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da0  [0x195e9eda0]
+                + ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cd8  [0x195e9ecd8]
+                + ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+                + ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cdc  [0x195e9ecdc]
+                + ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da4  [0x195e9eda4]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db0  [0x195e9edb0]
+                + 379 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! 189 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! : 107 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! : 34 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                + ! : 12 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! : 11 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd4  [0x195e9edd4]
+                + ! : 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d9c  [0x195e9ed9c]
+                + ! : 6 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+                + ! : 4 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da4  [0x195e9eda4]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+                + ! 114 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! 35 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! 14 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! 9 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! 4 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+                + ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d00  [0x195e9ed00]
+                + ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1de4  [0x195e9ede4]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d24  [0x195e9ed24]
+                + 119 DYLD-STUB$$__sincos_stret  (in discrete_fourier_transform) + 4  [0x1043d51e4]
+                + 28 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1ddc  [0x195e9eddc]
+                1737 discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform) + 576  [0x10439cf70]
+                + 744 __sincos_stret  (in libsystem_m.dylib) + 348,36,...  [0x195e9e9fc,0x195e9e8c4,...]
+                + 454 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! 207 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! : 101 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! : 54 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+                + ! : 46 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cfc  [0x195e9ecfc]
+                + ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! 164 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! 49 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                + ! 21 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+                + ! 7 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc4  [0x195e9edc4]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cd8  [0x195e9ecd8]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da4  [0x195e9eda4]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+                + 419 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! 249 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! : 109 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! : 56 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                + ! : 41 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                + ! : 12 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd4  [0x195e9edd4]
+                + ! : 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+                + ! : 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! : 7 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d9c  [0x195e9ed9c]
+                + ! : 6 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                + ! 101 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! 43 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! 11 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! 9 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! 5 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1de4  [0x195e9ede4]
+                + 103 DYLD-STUB$$__sincos_stret  (in discrete_fourier_transform) + 4  [0x1043d51e4]
+                + 17 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1ddc  [0x195e9eddc]
+                1538 discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform) + 588  [0x10439cf7c]
+                + 682 __sincos_stret  (in libsystem_m.dylib) + 348,364,...  [0x195e9e9fc,0x195e9ea0c,...]
+                + 405 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! 201 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                + ! : 132 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! : 28 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+                + ! : 16 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! : 16 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d00  [0x195e9ed00]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d18  [0x195e9ed18]
+                + ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! 125 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! 26 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! 21 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd4  [0x195e9edd4]
+                + ! 16 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                + ! 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                + ! 6 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cdc  [0x195e9ecdc]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc8  [0x195e9edc8]
+                + 355 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! 133 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                + ! : 73 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                + ! : 30 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                + ! : 18 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d9c  [0x195e9ed9c]
+                + ! : 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da0  [0x195e9eda0]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+                + ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+                + ! 94 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                + ! 70 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1ddc  [0x195e9eddc]
+                + ! 41 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                + ! 13 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                + ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                + ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1de0  [0x195e9ede0]
+                + 96 DYLD-STUB$$__sincos_stret  (in discrete_fourier_transform) + 4,8,...  [0x1043d51e4,0x1043d51e8,...]
+                1482 discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform) + 564,780,...  [0x10439cf64,0x10439d03c,...]
+                1481 discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform) + 628  [0x10439cfa4]
+                  585 __sincos_stret  (in libsystem_m.dylib) + 348,364,...  [0x195e9e9fc,0x195e9ea0c,...]
+                  387 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                  ! 198 __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+                  ! : 130 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                  ! : 27 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+                  ! : 23 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                  ! : 10 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                  ! : 4 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                  ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d00  [0x195e9ed00]
+                  ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d2c  [0x195e9ed2c]
+                  ! 119 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                  ! 21 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                  ! 19 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                  ! 8 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+                  ! 7 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                  ! 6 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                  ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da4  [0x195e9eda4]
+                  ! 3 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd4  [0x195e9edd4]
+                  ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd0  [0x195e9edd0]
+                  ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d34  [0x195e9ed34]
+                  382 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                  ! 140 __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+                  ! : 57 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+                  ! : 27 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+                  ! : 23 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+                  ! : 12 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+                  ! : 9 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+                  ! : 5 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d9c  [0x195e9ed9c]
+                  ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db0  [0x195e9edb0]
+                  ! : 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+                  ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da0  [0x195e9eda0]
+                  ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+                  ! : 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd0  [0x195e9edd0]
+                  ! 96 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+                  ! 66 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1ddc  [0x195e9eddc]
+                  ! 60 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+                  ! 12 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+                  ! 5 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+                  ! 2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+                  ! 1 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d04  [0x195e9ed04]
+                  125 DYLD-STUB$$__sincos_stret  (in discrete_fourier_transform) + 4,8,...  [0x1043d51e4,0x1043d51e8,...]
+                  2 ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d34  [0x195e9ed34]
+
+Total number in stack (recursive counted multiple, when >=5):
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]
+        8       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]
+        8       __sincos_stret  (in libsystem_m.dylib) + 372  [0x195e9ea14]
+        8       __sincos_stret  (in libsystem_m.dylib) + 392  [0x195e9ea28]
+        7       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]
+        7       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]
+        7       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]
+        6       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]
+        5       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]
+        5       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]
+        5       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]
+        5       ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]
+
+Sort by top of stack, same collapsed (when >= 5):
+        __sincos_stret  (in libsystem_m.dylib)        3158
+        discrete_fourier_transform::main::h185ddb9a83811cbb  (in discrete_fourier_transform)        1482
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d30  [0x195e9ed30]        866
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd8  [0x195e9edd8]        851
+        DYLD-STUB$$__sincos_stret  (in discrete_fourier_transform)        443
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d20  [0x195e9ed20]        245
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1ddc  [0x195e9eddc]        181
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db4  [0x195e9edb4]        150
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d10  [0x195e9ed10]        144
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dac  [0x195e9edac]        144
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1db8  [0x195e9edb8]        137
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d14  [0x195e9ed14]        90
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dcc  [0x195e9edcc]        83
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1df8  [0x195e9edf8]        53
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dd4  [0x195e9edd4]        47
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cf0  [0x195e9ecf0]        46
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d08  [0x195e9ed08]        44
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d9c  [0x195e9ed9c]        23
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da8  [0x195e9eda8]        22
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1dc0  [0x195e9edc0]        19
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d34  [0x195e9ed34]        13
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1d00  [0x195e9ed00]        8
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da4  [0x195e9eda4]        8
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1da0  [0x195e9eda0]        7
+        ???  (in libsystem_m.dylib)  load address 0x195e9d000 + 0x1cfc  [0x195e9ecfc]        5
+
+Binary Images:
+       0x10439c000 -        0x1043e3ff3 +discrete_fourier_transform (0) <D599BDBD-0503-319C-90C0-DB24E84C52E8> /Users/*/discrete_fourier_transform
+       0x189328000 -        0x189376f08  libobjc.A.dylib (906) <49E2DCB3-F014-3FCF-949B-F5F57B3EF0A8> /usr/lib/libobjc.A.dylib
+       0x189377000 -        0x18940b317  dyld (1.0.0 - 1122.1.2) <EC7A3BA0-F9BF-3AB8-A0F4-8622E5606B20> /usr/lib/dyld
+       0x18940c000 -        0x189410ff8  libsystem_blocks.dylib (90) <A2904D7C-66C8-36E7-BC4B-D30025BA0351> /usr/lib/system/libsystem_blocks.dylib
+       0x189411000 -        0x189457fff  libxpc.dylib (2679.40.6) <212B4ED6-CBB2-33DE-95C0-7F8A405B3EBD> /usr/lib/system/libxpc.dylib
+       0x189458000 -        0x189472fff  libsystem_trace.dylib (1481.40.16) <91ECA044-8462-3293-AEEA-183BF841CBA2> /usr/lib/system/libsystem_trace.dylib
+       0x189473000 -        0x189510ff7  libcorecrypto.dylib (1608.40.12) <5258A992-DC2A-3A90-90F1-A64863C450A7> /usr/lib/system/libcorecrypto.dylib
+       0x189511000 -        0x189547fff  libsystem_malloc.dylib (474.0.13) <901200AA-1016-3DAA-8816-5032588ED460> /usr/lib/system/libsystem_malloc.dylib
+       0x189548000 -        0x18958efff  libdispatch.dylib (1462.0.4) <DC1D0187-7149-3100-BC63-F633AFEBEE6C> /usr/lib/system/libdispatch.dylib
+       0x18958f000 -        0x189591fff  libsystem_featureflags.dylib (85) <3282C86B-3BD7-353A-AC3E-09BCC631BB1F> /usr/lib/system/libsystem_featureflags.dylib
+       0x189592000 -        0x189610ffb  libsystem_c.dylib (1583.40.7) <DECB8685-F34A-3979-AFCB-71FB55747E41> /usr/lib/system/libsystem_c.dylib
+       0x189611000 -        0x18969eff7  libc++.1.dylib (1600.151) <3702EEDE-997D-38E6-A6A1-C08EB22C375B> /usr/lib/libc++.1.dylib
+       0x18969f000 -        0x1896b6fff  libc++abi.dylib (1600.151) <EDBB6DF0-72F9-3BC2-96FA-A86E05D3D305> /usr/lib/libc++abi.dylib
+       0x1896b7000 -        0x1896f1fef  libsystem_kernel.dylib (10002.41.9) <B7751381-1442-30B5-91B9-AD7BE461BEBE> /usr/lib/system/libsystem_kernel.dylib
+       0x1896f2000 -        0x1896feff3  libsystem_pthread.dylib (519) <DAF95373-5DE6-39A1-A6CE-D87F3F0629CC> /usr/lib/system/libsystem_pthread.dylib
+       0x1896ff000 -        0x189723fff  libdyld.dylib (1122.1.2) <D9526862-A8B2-3424-98E7-74D5A18F9250> /usr/lib/system/libdyld.dylib
+       0x189724000 -        0x18972affb  libsystem_platform.dylib (306.0.1) <FC8CD17B-8769-348C-8DCD-1BFED022F9E4> /usr/lib/system/libsystem_platform.dylib
+       0x18972b000 -        0x189757ffb  libsystem_info.dylib (583.0.1) <D4F1ECDB-5AA0-3733-81D9-C9529001A13C> /usr/lib/system/libsystem_info.dylib
+       0x18ca9b000 -        0x18caa5ff7  libsystem_darwin.dylib (1583.40.7) <EF617F40-254D-325F-BA6B-382CB7D8BC89> /usr/lib/system/libsystem_darwin.dylib
+       0x18cf0d000 -        0x18cf1dfff  libsystem_notify.dylib (317) <D86A0878-9C5C-367C-8A6D-941C5E4C11C2> /usr/lib/system/libsystem_notify.dylib
+       0x18ed30000 -        0x18ed49ff7  libsystem_networkextension.dylib (1838.40.8) <11D8A745-1F2F-3493-872E-C58F13BBD4D2> /usr/lib/system/libsystem_networkextension.dylib
+       0x18edc0000 -        0x18edd7fff  libsystem_asl.dylib (398) <9833954F-A010-3492-810A-70F96E17266E> /usr/lib/system/libsystem_asl.dylib
+       0x190777000 -        0x19077fff3  libsystem_symptoms.dylib (1848.40.12) <B9688985-C611-3987-9BD1-23ABCFA25045> /usr/lib/system/libsystem_symptoms.dylib
+       0x1937d8000 -        0x193801ff7  libsystem_containermanager.dylib (582.40.2.0.1) <444831B7-DB95-3E3A-8C1C-97E49676B185> /usr/lib/system/libsystem_containermanager.dylib
+       0x194752000 -        0x194756fff  libsystem_configuration.dylib (1296.40.6) <389249EB-5A9C-362C-985F-6F470280D6F3> /usr/lib/system/libsystem_configuration.dylib
+       0x194757000 -        0x19475cff3  libsystem_sandbox.dylib (2169.41.1) <893061BE-F3BD-3696-AC8D-4DA5E7477A20> /usr/lib/system/libsystem_sandbox.dylib
+       0x195475000 -        0x195477ffb  libquarantine.dylib (172.40.1) <FA2FCD51-D2EB-37A7-AE47-66547DBCAB87> /usr/lib/system/libquarantine.dylib
+       0x195b7b000 -        0x195b80fff  libsystem_coreservices.dylib (152.1) <26F9E755-26EC-3974-BEC8-3B706D0254BA> /usr/lib/system/libsystem_coreservices.dylib
+       0x195e9d000 -        0x195ed3ff3  libsystem_m.dylib (3252.40.2) <072B3C9C-C54E-3F27-B231-88482F485502> /usr/lib/system/libsystem_m.dylib
+       0x195ed8000 -        0x195edfffb  libmacho.dylib (1009) <29C5FB27-B26B-3927-89C1-917051E5D353> /usr/lib/system/libmacho.dylib
+       0x195f00000 -        0x195f0dff7  libcommonCrypto.dylib (600025) <4CF0B406-031F-3BC7-8A97-61DFA262C179> /usr/lib/system/libcommonCrypto.dylib
+       0x195f0e000 -        0x195f18fff  libunwind.dylib (1600.112) <18A7097B-A9D1-34C6-8333-0D16CF789585> /usr/lib/system/libunwind.dylib
+       0x195f19000 -        0x195f20fff  liboah.dylib (315.1) <D927DACB-D13E-3976-8065-D41237EC7529> /usr/lib/liboah.dylib
+       0x195f21000 -        0x195f2aff3  libcopyfile.dylib (196) <CE4F0BED-9109-3557-8B48-45E051D43210> /usr/lib/system/libcopyfile.dylib
+       0x195f2b000 -        0x195f2efff  libcompiler_rt.dylib (103.1) <A7A07A05-6551-3867-A8AE-2935D8FA1B4E> /usr/lib/system/libcompiler_rt.dylib
+       0x195f2f000 -        0x195f33ffb  libsystem_collections.dylib (1583.40.7) <985E00EB-F590-3B07-876A-EFE015DB79EF> /usr/lib/system/libsystem_collections.dylib
+       0x195f34000 -        0x195f36ffb  libsystem_secinit.dylib (143) <A0DAA91D-049F-334F-917F-92DF752CD8F4> /usr/lib/system/libsystem_secinit.dylib
+       0x195f37000 -        0x195f39ffb  libremovefile.dylib (70) <F4566B6C-20B5-334F-86E6-50E4085DADED> /usr/lib/system/libremovefile.dylib
+       0x195f3a000 -        0x195f3affb  libkeymgr.dylib (31) <B6E3DE59-7C3B-3403-89FE-38BBFE86BA90> /usr/lib/system/libkeymgr.dylib
+       0x195f3b000 -        0x195f43ff7  libsystem_dnssd.dylib (2200.40.37.0.1) <D922E985-BD3A-3618-9189-5B931F3CD90C> /usr/lib/system/libsystem_dnssd.dylib
+       0x195f44000 -        0x195f49fff  libcache.dylib (92) <47B56AFF-F15C-3550-B9B6-560806BC20C5> /usr/lib/system/libcache.dylib
+       0x195f4a000 -        0x195f4bfff  libSystem.B.dylib (1336) <1E176743-EDDD-309B-AE12-6369F1A2029B> /usr/lib/libSystem.B.dylib
+       0x228bd6000 -        0x228bd9fff  libsystem_darwindirectory.dylib (86.0.2) <8C2C7C2A-F18E-3196-BB40-B4BB95C5BFF9> /usr/lib/system/libsystem_darwindirectory.dylib
